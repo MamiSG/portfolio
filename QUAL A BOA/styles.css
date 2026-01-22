@@ -1,0 +1,439 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.back-button:hover {
+    opacity: 0.6;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+html, body {
+    font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: #6a0dad;
+    color: #f3f3f3;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounceSubtle {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.fade-in-down {
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.fade-in-left {
+    animation: fadeInLeft 0.8s ease-out;
+}
+
+.fade-in-right {
+    animation: fadeInRight 0.8s ease-out;
+}
+
+.bounce-subtle {
+    animation: bounceSubtle 3s ease-in-out infinite;
+}
+
+.scale-up {
+    animation: scaleUp 0.8s ease-out;
+}
+
+.animation-delay-1 {
+    animation-delay: 0.2s;
+}
+
+.animation-delay-2 {
+    animation-delay: 0.4s;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+.logo-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    min-height: 500px;
+}
+
+.logo-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 960px;
+}
+
+.logo-image {
+    width: 960px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.hero-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-title {
+    font-size: 96px;
+    font-weight: 900;
+    line-height: 1;
+    color: rgba(243, 243, 243, 0.95);
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.hero-subtitle {
+    font-size: 32px;
+    font-weight: 500;
+    color: rgba(243, 243, 243, 0.95);
+    max-width: 1013px;
+    line-height: 1.3;
+}
+
+.phones-container {
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.phones-image {
+    width: 1012px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.tools-section {
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+}
+
+.section-title {
+    font-size: 64px;
+    font-weight: 800;
+    color: rgba(243, 243, 243, 0.95);
+    text-align: center;
+    max-width: 864px;
+    line-height: 1.2;
+    text-transform: capitalize;
+}
+
+.tools-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    width: 100%;
+    max-width: 1400px;
+}
+
+.tools-image-wrapper {
+    flex: 0 1 634px;
+    display: flex;
+    justify-content: center;
+}
+
+.tools-image {
+    width: 634px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.tools-text {
+    flex: 0 1 578px;
+    display: flex;
+    align-items: center;
+}
+
+.tools-text p {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #f3f3f3;
+    text-align: right;
+    max-width: 578px;
+    margin-left: auto;
+}
+
+.benefits-section {
+    padding: 100px 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    min-height: 100vh;
+}
+
+.benefits-title {
+    font-size: 96px;
+    font-weight: 800;
+    color: rgba(243, 243, 243, 0.95);
+    text-align: center;
+    line-height: 1.1;
+    text-transform: capitalize;
+}
+
+.benefits-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    width: 100%;
+    max-width: 1500px;
+    flex-grow: 1;
+}
+
+.benefits-image-wrapper {
+    flex: 0 1 800px;
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+}
+
+.benefits-image {
+    width: 800px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0;
+}
+
+.benefit-card {
+    background-color: transparent;
+    border: none;
+    padding: 30px;
+    transition: transform 0.3s ease;
+    flex: 0 1 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-card h3 {
+    font-size: 48px;
+    font-weight: 800;
+    color: #f3f3f3;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.left-card h3 {
+    max-width: 246px;
+}
+
+.right-card h3 {
+    max-width: 246px;
+}
+
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 72px;
+    }
+
+    .hero-subtitle {
+        font-size: 24px;
+    }
+
+    .section-title {
+        font-size: 48px;
+    }
+
+    .benefits-title {
+        font-size: 72px;
+    }
+
+    .benefit-card h3 {
+        font-size: 36px;
+    }
+
+    .tools-text p {
+        font-size: 24px;
+        text-align: center;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 48px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+    .section-title {
+        font-size: 36px;
+    }
+
+    .benefits-title {
+        font-size: 48px;
+    }
+
+    .benefit-card h3 {
+        font-size: 24px;
+    }
+
+    .tools-content,
+    .benefits-content {
+        gap: 30px;
+    }
+
+    .tools-text p {
+        font-size: 18px;
+    }
+
+    .logo-section {
+        min-height: 250px;
+        padding: 20px;
+    }
+
+    .hero-section {
+        padding: 40px 20px;
+    }
+
+    .tools-section {
+        padding: 40px 20px;
+        gap: 40px;
+    }
+
+    .benefits-section {
+        padding: 40px 20px;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .benefits-title {
+        font-size: 36px;
+    }
+
+    .benefit-card h3 {
+        font-size: 20px;
+    }
+
+    .tools-text p {
+        font-size: 16px;
+    }
+}

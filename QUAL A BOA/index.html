@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual a Boa? - Encontre o lugar perfeito</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <a href="../index.html" class="back-button">← Voltar</a>
+
+    <div class="container">
+        <section class="logo-section">
+            <div class="logo-content fade-in-down">
+                <img src="assets/logo.png" alt="Qual a Boa Logo" class="logo-image">
+            </div>
+        </section>
+
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title fade-in-up">QUAL A BOA?</h1>
+                <div class="phones-container fade-in-up animation-delay-2">
+                    <img src="assets/principal.png" alt="App preview" class="phones-image bounce-subtle">
+                </div>
+                 <p class="hero-subtitle fade-in-up animation-delay-1">Um app que te ajuda a encontrar o lugar perfeito para seu tipo de rolê!</p>
+            </div>
+        </section>
+
+        <section class="tools-section">
+            <h2 class="section-title fade-in-up">Ferramentas que funcionam!</h2>
+            <div class="tools-content">
+                <div class="tools-image-wrapper fade-in-left">
+                    <img src="assets/cupons.png" alt="Cupons e ferramentas" class="tools-image">
+                </div>
+                <div class="tools-text fade-in-right">
+                    <p>Feito para pessoas que buscam conhecer um lugar novo, estabelecimentos que buscam atrair mais clientes e eventos que querem fácil divulgação.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits-section">
+            <h2 class="benefits-title fade-in-up">Em boas mãos!</h2>
+            <div class="benefits-content">
+                <div class="benefit-card left-card fade-in-right">
+                    <h3>Aumente seus lucros com o qual a boa!</h3>
+                </div>
+                <div class="benefits-image-wrapper fade-in-left">
+                    <img src="assets/perfil.png" alt="App em mãos" class="benefits-image scale-up">
+                </div>
+                <div class="benefit-card right-card fade-in-right animation-delay-1">
+                    <h3>Encontre seu rolê perfeito com o qual a boa!</h3>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+            if (link.hostname === window.location.hostname) {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const href = this.href;
+                    document.body.classList.add("fade-out");
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 500);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
