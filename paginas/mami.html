@@ -12,7 +12,9 @@
             rel="stylesheet"
         >
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../scripts/language-switcher.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <script src="../scripts/translations.js"></script>
     </head>
     <body>
 
@@ -22,19 +24,19 @@
             <a href="#parallax3" class="nav-dot"></a>
         </div>      
 
-        <a href="../index.html" class="back-button">← Voltar</a>
+        <a href="../index.html" class="back-button" data-i18n="back-button">← Voltar</a>
     
         <div class="parallax-image parallax-image-01" id="section1">
             <div class="texto-aparecendo">
-                <h1>OLÁ,</h1>
-                <h2>eu sou a Liz!</h2>
+                <h1 data-i18n="hello">OLÁ,</h1>
+                <h2 data-i18n="name">eu sou a Liz!</h2>
             </div>
             <img src="assets/Liz_Art.png" alt="Imagem de Liz" class="imagem-aparecendo">
         </div>
     
         <section>
-            <h2>SEJA BEM-VINDO</h2>
-            <p>Eu sou a Liz, mas todos me chamam de MAMI (Mami é uma personagem do anime Madoka Magica), sou Baiana retada e há 5 anos moro em Maringá - PR. Me formei em Engenharia de Software na UNICESUMAR em 2025, foi na Cesu que conheci a área de UI/UX design, e sempre estou muito empolgada para contar mais sobre essa paixão!!</p>
+            <h2 data-i18n="welcome-title">SEJA BEM-VINDO</h2>
+            <p data-i18n="welcome-text">Eu sou a Liz, mas todos me chamam de MAMI (Mami é uma personagem do anime Madoka Magica), sou Baiana retada e há 5 anos moro em Maringá - PR. Me formei em Engenharia de Software na UNICESUMAR em 2025, foi na Cesu que conheci a área de UI/UX design, e sempre estou muito empolgada para contar mais sobre essa paixão!!</p>
         </section>
     
         <div class="parallax-image parallax-image-02" id="section2">
@@ -56,19 +58,19 @@
         </div>
     
         <section>
-            <h2>Diferenciando</h2>
-            <p>A área de UI/UX design utilizando todo fundamento da programação front-end e back-end, proporciona uma melhor experiência ao usuário, fazendo com que, consequentemente, o projeto tenha menos necessidade de suporte, se diferencie da concorrência e aumente o lucro do produto. A primeira impressão é sempre a que fica! Por isso, trabalho com ferramentas como Notion, Figma, HTML, CSS e várias outras para garantir a excelência do projeto.</p>
-            <a href="https://pepper-price-dfc.notion.site/Qual-a-Boa-3cfc2d075b7e80959903e76128a7be88" class="project-button" target="_blank">Conheça um dos meus projetos: Qual a Boa?</a>
+            <h2 data-i18n="differentiating-title">Diferenciando</h2>
+            <p data-i18n="differentiating-text">A área de UI/UX design utilizando todo fundamento da programação front-end e back-end, proporciona uma melhor experiência ao usuário, fazendo com que, consequentemente, o projeto tenha menos necessidade de suporte, se diferencie da concorrência e aumente o lucro do produto. A primeira impressão é sempre a que fica! Por isso, trabalho com ferramentas como Notion, Figma, HTML, CSS e várias outras para garantir a excelência do projeto.</p>
+            <a href="https://pepper-price-dfc.notion.site/Qual-a-Boa-3cfc2d075b7e80959903e76128a7be88" class="project-button" data-i18n="project-button" target="_blank">Conheça um dos meus projetos: Qual a Boa?</a>
         </section>
     
         <div class="parallax-image parallax-image-03" id="section3">
 
             <div class="contact-card">
-                <img src="assets/perfil.jpg" alt="Minha Foto" class="profile-photo">
+                <img src="assets/perfil.jpg" data-i18n-alt="profile-photo-alt" alt="Minha Foto" class="profile-photo">
                 <div class="info">
-                    <h2>Liz Brito</h2>
-                    <p>Email: <a href="mailto:sgmami37@gmail.com">sgmami37@gmail.com</a></p>
-                    <p>Telefone: <a href="tel:+5571991653918">(71) 99165-3918</a></p>
+                    <h2 data-i18n="profile-name">Liz Brito</h2>
+                    <p><span data-i18n="email-label">Email: </span><a href="mailto:sgmami37@gmail.com">sgmami37@gmail.com</a></p>
+                    <p><span data-i18n="phone-label">Telefone: </span><a href="tel:+5571991653918">(71) 99165-3918</a></p>
                     <div class="social-media-buttons">
                         <a href="https://www.instagram.com/ma.misg/" class="social-media-button">
                             <img src="assets/icons/instagram.svg" alt="Instagram">
