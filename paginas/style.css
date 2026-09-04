@@ -331,3 +331,24 @@ section > p {
 .social-media-button:nth-child(2):hover {
     background: var(--linkedin);
 }
+
+.project-button {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 12px 40px;
+    background: linear-gradient(135deg, #8B5CF6 0%, #D946EF 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 15px rgba(139, 92, 246, 0.3);
+    border: 2px solid transparent;
+}
+
+.project-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 25px rgba(139, 92, 246, 0.5);
+    background: linear-gradient(135deg, #D946EF 0%, #8B5CF6 100%);
+}
