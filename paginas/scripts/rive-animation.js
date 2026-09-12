@@ -1,10 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
     const canvas = document.getElementById("riveBox");
     const ctx = canvas.getContext("2d");
-    const scaleFactor = window.devicePixelRatio || 1;
-    canvas.width = canvas.parentElement.clientWidth * scaleFactor;
-    canvas.height = canvas.parentElement.clientHeight * scaleFactor;
-    ctx.scale(scaleFactor, scaleFactor);
+
+    function resizeCanvas() {
+        const parent = canvas.parentElement;
+        const scaleFactor = window.devicePixelRatio || 1;
+        const width = parent.clientWidth;
+        const height = parent.clientHeight;
+
+        canvas.width = width * scaleFactor;
+        canvas.height = height * scaleFactor;
+        ctx.setTransform(1, 0, 0, 1, 0, 0);
+        ctx.scale(scaleFactor, scaleFactor);
+    }
+
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
 
     const riveInstance = new rive.Rive({
         src: "./assets/untitled.riv", 

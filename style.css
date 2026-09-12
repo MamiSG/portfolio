@@ -7,6 +7,8 @@ body {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
   font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 body.loaded {
@@ -19,9 +21,19 @@ body.loaded {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
 section {
   position: relative;
   height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,24 +53,53 @@ section {
 
 .link {
   display: inline-block;
-  text-decoration: none; 
+  text-decoration: none;
+  width: min(80vw, 30rem);
+  text-align: center;
 }
 
 h1 {
   background: white;
-  font-size: 3.45rem;
+  font-size: clamp(2.2rem, 5vw, 5rem);
   font-weight: 900;
-  padding: 2rem 3rem;
+  padding: clamp(1.25rem, 2vw, 2rem) clamp(1.5rem, 3vw, 3rem);
   max-width: 30rem;
-  width: auto;
+  width: 100%;
   display: inline-flex;
-  letter-spacing: 0.35rem;
+  letter-spacing: 0.25rem;
   align-items: center;
   justify-content: center;
   mix-blend-mode: screen;
   transition: transform 0.3s ease-in-out;
+  text-transform: uppercase;
 }
 
 .link:hover h1 {
-  transform: scale(1.1);
+  transform: scale(1.08);
+}
+
+@media (max-width: 768px) {
+  section {
+    min-height: 50vh;
+    height: 50vh;
+  }
+
+  .link {
+    width: min(72vw, 22rem);
+  }
+
+  h1 {
+    letter-spacing: 0.15rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .link {
+    width: min(78vw, 18rem);
+  }
+
+  h1 {
+    padding: 1rem 1.25rem;
+    letter-spacing: 0.1rem;
+  }
 }
